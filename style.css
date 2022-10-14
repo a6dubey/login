@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+   
+    background:linear-gradient(345deg, rgb(228, 66, 66), rgb(240, 240, 65));
+    min-height: 100vh;
+    /* width: 100%; */
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#chk{
+    display:none;
+}
+.container{
+    position: absolute;
+    background: inherit;
+    height: 500px;
+    width:350px;
+    border-radius: 20px;
+    box-shadow: 0px 0 50px 20px rgba(10,10,20,.3);
+    overflow: hidden;
+    
+}
+
+.signup{
+    position:relative;
+    width: 100%;
+    height: 100%;
+    margin: 20px auto;
+    display:inline-block;
+    justify-content: center;
+    align-items: center;
+    transition: 1.2s ease-in-out;
+    
+}
+label{
+    transition: 0.8s ease-in-out;
+    /* color: white; */
+    display:flex;
+    justify-content: center;
+    /* align-items: center; */
+    font-size: 30px;
+    font-weight: bolder;
+    margin: 50px;
+    cursor: pointer;
+
+}
+
+input{
+    display:flex;
+    justify-content: center;
+    width:60%;
+    border: none;
+    height: 40px;
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    outline: none;
+    background: rgb(239, 235, 235);
+
+}
+button{
+    position: relative;
+    width:60%;
+    height: 40px;
+    background-color: rgb(151, 119, 231);
+    color: white;
+    font-size: larger;
+    font-weight: bolder;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+    transition: 0.8s ease-in-out;
+}
+button:hover{
+    background-color: rgb(101, 29, 173);
+}
+.login{
+    position:relative;
+    height: 460px;
+    background-color: white;
+    border-radius: 60%/10%;
+    /* font-size: 10px; */
+    transition: 0.8s ease-in-out;
+    transform: translateY(-140px);
+    
+}
+
+.login label{
+  transform: scale(0.6);  
+}
+#chk:checked ~ .login{
+    transform: translateY(-480px);
+    
+}
+#chk:checked ~ .login label{
+    transform: scale(1);
+}
+#chk:checked ~ .signup label{
+    transform: scale(.6);
+}
