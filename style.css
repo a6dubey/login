@@ -18,7 +18,8 @@ body{
 }
 .container{
     position: absolute;
-    background: inherit;
+    /* background:grey; */
+    background-color: inherit;
     height: 500px;
     width:350px;
     border-radius: 20px;
@@ -63,7 +64,13 @@ input{
     text-align: center;
     outline: none;
     background: rgb(239, 235, 235);
-
+    transition: .7s;
+}
+input:valid ,
+input:focus{
+    width:80%;
+    height:50px;
+    font-size: 1.2em;
 }
 button{
     position: relative;
@@ -92,6 +99,32 @@ button:hover{
     /* font-size: 10px; */
     transition: 0.8s ease-in-out;
     transform: translateY(-140px);
+    
+}
+span{
+    position: absolute;
+    left:22vw;
+    transform: translateY(-50px);
+    pointer-events: none;
+    color: rgb(160, 160, 160);
+    transition: .6s;
+    
+
+}
+
+input:valid ~span,
+input:focus ~span
+{
+   
+    color: black;
+    transform: translateX(-90px) translateY(-78px);
+    overflow: none;
+    font-size: 1.1em;
+    padding: 0 10px;
+    background-color: rgb(165, 164, 163);
+    border-left: 5px solid black;
+    border-right: 5px solid black;
+    border-radius: 5px;
     
 }
 
